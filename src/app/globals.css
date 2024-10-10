@@ -3,20 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,4 +20,14 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+body > div:nth-child(1) > div > div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
+body > div:nth-child(1) > div > div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet{
+  width: 50px !important;
+  border-radius: 5px !important;
+}
+
+body > div:nth-child(1) > div > div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet{
+  background-color: azure !important;
 }
