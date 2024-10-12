@@ -2,18 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:root {}
 
+
+
+@layer base {
+  @font-face {
+    font-family: 'Estedad';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Estedad.woff) format('woff');
+  }
+  html {
+    font-family: 'Estedad', Verdana, Geneva, Tahoma, sans-serif;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
 
-  }
+@media (prefers-color-scheme: dark) {
+  :root {}
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  direction: rtl;
 }
 
 @layer utilities {
@@ -22,12 +35,12 @@ body {
   }
 }
 
-body > div:nth-child(1) > div > div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet.swiper-pagination-bullet-active,
-body > div:nth-child(1) > div > div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet{
+body>div:nth-child(1)>div>div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal>span.swiper-pagination-bullet.swiper-pagination-bullet-active,
+body>div:nth-child(1)>div>div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal>span.swiper-pagination-bullet {
   width: 50px !important;
   border-radius: 5px !important;
 }
 
-body > div:nth-child(1) > div > div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal > span.swiper-pagination-bullet{
+body>div:nth-child(1)>div>div.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal>span.swiper-pagination-bullet {
   background-color: azure !important;
 }
