@@ -1,6 +1,7 @@
 'use client'
-import SearchBox from "../globalComponents/SearchBox"
-import CatSlider from "../globalComponents/CatSlider";
+import SearchBox from "@/components/globalComponents/SearchBox";
+import CatSlider from "../CatSlider";
+
 
 
 const CategoriesSection = () => {

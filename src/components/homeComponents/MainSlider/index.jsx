@@ -5,7 +5,7 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
-import pic from '../../../public/pictures/ghomeyshi.png'
+import pic from '../../../../public/pictures/ghomeyshi.png'
 
 const slides = [
     { src: pic, alt: '', id: 1 },

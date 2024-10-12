@@ -1,5 +1,5 @@
-import CategoriesSection from "@/components/CategoriesSection";
-import MainSlider from "@/components/MainSlider";
+import CategoriesSection from "@/components/homeComponents/CategoriesSection";
+import MainSlider from "@/components/homeComponents/MainSlider";
 
 export default function Home() {
   return (
