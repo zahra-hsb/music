@@ -10,8 +10,10 @@ export default function Home() {
       <MainSlider />
       <CategoriesSection />
       <TextContainer text={'این اپ برای لحظاتی که می‌خوای با دوستانت همصدایی کنی، ساخته شده.'} />
-      <FamousMusicsSection />
+      <FamousMusicsSection isPopular={false} title={'معروف ترین آهنگ ها'} />
       <TextCatSection />
+      <TextContainer text={'بنر تبلیغات'} />
+      <FamousMusicsSection isPopular={true} title={'پرطرفدارترین ها'} />
     </>
   );
 }

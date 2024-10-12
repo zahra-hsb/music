@@ -16,7 +16,7 @@ const TextCatSection = () => {
     return (
         <>
             <section className="p-5">
-                <h4>دسته بندی آهنگ ها</h4>
+                <h4 className="pb-5">دسته بندی آهنگ ها</h4>
                 <Swiper
                     slidesPerView={4.5}
                     spaceBetween={15}

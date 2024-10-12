@@ -12,15 +12,15 @@ const picsArray = [
     { id: 4, pic: pic2, audioTitle: 'یه چیزی میشه دیگه', singer: 'رضا صادقی' },
 ]
 
-const FamousMusicsSection = () => {
+const FamousMusicsSection = ({ title, isPopular }) => {
     return (
         <>
             <section className="p-5 w-full">
                 <h3 className="text-lg">
-                    معروف ترین آهنگ ها
+                    {title}
                 </h3>
                 <div className="w-full py-5">
-                    <MusicSlider picsArray={picsArray} isPopular={false} />
+                    <MusicSlider picsArray={picsArray} isPopular={isPopular} />
                 </div>
             </section>
 
