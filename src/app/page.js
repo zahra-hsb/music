@@ -13,7 +13,7 @@ export default function Home() {
       <FamousMusicsSection isPopular={false} title={'معروف ترین آهنگ ها'} />
       <TextCatSection />
       <TextContainer text={'بنر تبلیغات'} />
-      <FamousMusicsSection isPopular={true} title={'پرطرفدارترین ها'} />
+      <FamousMusicsSection isPopular={true} title={'پرطرفدارترین ها '} />
     </>
   );
 }
