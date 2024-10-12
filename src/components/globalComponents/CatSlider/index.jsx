@@ -24,7 +24,7 @@ const CatSlider = () => {
             <div className="w-full py-5">
                 <Swiper
                     slidesPerView={4}
-                    spaceBetween={30}
+                    spaceBetween={20}
                     centeredSlides={false}
                     pagination={{
                         clickable: true,
