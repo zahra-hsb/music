@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import pic from '../../../../public/pictures/ghomeyshi.png'
+import { Autoplay } from "swiper/modules";
 
 const slides = [
     { src: pic, alt: '', id: 1 },
@@ -19,7 +20,15 @@ const MainSlider = () => {
     return (
         <>
             <div className=''>
-                <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+                <Swiper
+                    pagination={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    modules={[Pagination, Autoplay]}
+                    loop={true}
+                    className="mySwiper">
                     {slides?.map(item => (
                         <>
                             <SwiperSlide>

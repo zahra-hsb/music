@@ -1,7 +1,9 @@
 import Image from "next/image"
 import { Swiper, SwiperSlide } from "swiper/react"
+
 import 'swiper/css';
 import React, { createContext } from 'react';
+import { Autoplay } from "swiper/modules";
 
 const MusicSlider = ({ picsArray, isPopular }) => {
     return (
@@ -13,6 +15,12 @@ const MusicSlider = ({ picsArray, isPopular }) => {
                 pagination={{
                     clickable: true,
                 }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                modules={[Autoplay]}
+                loop={true}
                 className="mySwiper"
             >
                 {picsArray?.map(item => (
@@ -20,8 +28,8 @@ const MusicSlider = ({ picsArray, isPopular }) => {
                         <SwiperSlide>
                             <div>
                                 <Image className="w-full" src={item.pic} key={item.id} alt="" />
-                                {!isPopular && <h4 className="font-semibold">{item.audioTitle} از {item.singer}</h4>}
-                                {isPopular && <h4 className="font-semibold">{item.singer}</h4>}
+                                {!isPopular && <h4 className="font-semibold pt-5">{item.audioTitle} از {item.singer}</h4>}
+                                {isPopular && <h4 className="font-semibold pt-5">{item.singer}</h4>}
                             </div>
                         </SwiperSlide>
                     </>

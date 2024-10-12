@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import React, { createContext } from 'react';
 // Import Swiper styles
 import 'swiper/css';
+import { Autoplay } from "swiper/modules";
 
 import pic1 from '../../../../public/pictures/Ellipse 4.png'
 import pic2 from '../../../../public/pictures/Ellipse 5.png'
@@ -29,7 +30,12 @@ const CatSlider = () => {
                     pagination={{
                         clickable: true,
                     }}
-                    // modules={[]}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    modules={[Autoplay]}
+                    loop={true}
                     className="mySwiper"
                 >
                     {picsArray?.map(item => (
