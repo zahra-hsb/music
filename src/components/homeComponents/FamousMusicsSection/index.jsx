@@ -1,9 +1,7 @@
 'use client'
-import Image from "next/image"
-import { Swiper, SwiperSlide } from "swiper/react"
-import 'swiper/css';
-import React, { createContext } from 'react';
 
+
+import MusicSlider from '@/components/globalComponents/MusicSlider'
 import pic1 from '../../../../public/pictures/1.png'
 import pic2 from '../../../../public/pictures/2.png'
 
@@ -22,26 +20,7 @@ const FamousMusicsSection = () => {
                     معروف ترین آهنگ ها
                 </h3>
                 <div className="w-full py-5">
-                    <Swiper
-                        slidesPerView={3}
-                        spaceBetween={20}
-                        centeredSlides={false}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        className="mySwiper"
-                    >
-                        {picsArray?.map(item => (
-                            <>
-                                <SwiperSlide>
-                                    <div>
-                                        <Image className="w-full" src={item.pic} key={item.id} alt="" />
-                                        <h4 className="font-semibold">{item.audioTitle} از {item.singer}</h4>
-                                    </div>
-                                </SwiperSlide>
-                            </>
-                        ))}
-                    </Swiper>
+                    <MusicSlider picsArray={picsArray} isPopular={false} />
                 </div>
             </section>
 
